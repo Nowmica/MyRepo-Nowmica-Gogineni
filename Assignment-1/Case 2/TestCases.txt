@@ -1,0 +1,15 @@
+1+4+9+16+25+36+-------------------100
+
+Test cases
+
+Testcase no         Test case description           Given Input       Expected Output       Actual Output       Result
+
+1                   Passing a integer value              15                1240                  1240            Pass
+
+2                   Passing a float value                .2               invalid input       invalid input      Pass
+
+3                   Passing a string value              sfbgh             invalid input       invalid input      Pass
+
+4                   Passing a value                     4                    30                    30            Pass
+
+5                   Passing a value                     0                     0                     0            Pass
