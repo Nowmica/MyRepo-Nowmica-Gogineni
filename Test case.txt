@@ -1,0 +1,21 @@
+Parsing the string and displaying in required format
+
+Test Cases:
+Testcase No           Description                     Given Input               Expected Output               Actual Output               Result
+
+1   		Passing the integer value		-127		    -127  integer/long  4 	   -127  integer/long  4 	   Pass
+
+2               Passing the float value			.15		     .15  float/double  4 	   .15  float/double  4 	   Pass
+
+3 		Passing the String value		Abcd            	Abcd String 4		     Abcd String 4		   Pass
+
+4		Passing the character value              *              	 * character 2	             * character 2		   Pass
+
+5		Passing a random string                154 adfc s .15        154 integer/long 4             154 integer/long 4             Pass
+                                                                             adfc String 4                  adfc String 4
+									     s character 2                  s character 2
+									     .15 float/double 4             .15 float/double 4
+
+6              Passing a random string                 -57894 15fdf          -57894 integer/long 4          -57894 integer/long 4          Pass
+                                                                              invalid input                  invalid input
+									
