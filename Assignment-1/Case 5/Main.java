@@ -1,3 +1,4 @@
+//different ways to initialize private data member variables
 package mypack;
 
 public class Main
