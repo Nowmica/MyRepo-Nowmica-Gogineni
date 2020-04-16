@@ -1,3 +1,4 @@
+//Program to find the datatype of the given input
 package mypack;
 
 import java.io.BufferedReader;
