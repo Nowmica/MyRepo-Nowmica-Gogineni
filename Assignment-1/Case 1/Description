@@ -1,0 +1,5 @@
+Java does not provide anything like C's sizeof(). 
+Java object allocation and construction are tied together. 
+If a Java class defines fields that are references to further objects, it is also common to set them at construction time.
+Allocating a Java object therefore frequently allocates numerous interconnected object instances. 
+Coupled with automatic garbage collection, you never have to worry about Java memory allocation details.
