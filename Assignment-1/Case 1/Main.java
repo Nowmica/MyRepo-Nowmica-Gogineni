@@ -47,10 +47,27 @@ public class Main
 	//Method to check for int data type
 		static void integerOrNot(String str)
 		{
+			
 			try
 			{
 				Integer.parseInt(str);
-				System.out.println(str +" integer/long "+(Integer.BYTES));
+				System.out.println(str +" integer "+(Integer.BYTES));
+			}
+			catch(RuntimeException ex)
+			{
+				longOrNot(str);
+			}
+			
+		}
+	
+		//Method to check for long data type
+		static void longOrNot(String str)
+		{
+			
+			try
+			{
+				Long.parseLong(str);
+				System.out.println(str +" long "+(Long.BYTES));
 			}
 			catch(RuntimeException ex)
 			{
@@ -59,18 +76,33 @@ public class Main
 			
 		}
 		
+		
 		//Method to check for Float data type
 		static void floatOrNot(String str)
 		{
 			try
 			{
 				Float.parseFloat(str);
-				System.out.println(str+" Float/double "+(Float.BYTES));
+				System.out.println(str+" Float "+(Float.BYTES));
+			}
+			catch(RuntimeException ex)
+			{
+				doubleOrNot(str);
+			}
+			
+		}
+		
+		//Method to check for double data type	
+		static void doubleOrNot(String str)
+		{
+			try
+			{
+				Double.parseDouble(str);
+				System.out.println(str+" double "+(Double.BYTES));
 			}
 			catch(RuntimeException ex)
 			{
 				System.out.println("invalid input");
 			}
-			
 		}
 }
