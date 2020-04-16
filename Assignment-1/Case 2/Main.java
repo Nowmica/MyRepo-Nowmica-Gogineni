@@ -1,3 +1,4 @@
+//program to print the sum of series 1+4+9+16....
 package mypack;
 
 import java.util.InputMismatchException;
