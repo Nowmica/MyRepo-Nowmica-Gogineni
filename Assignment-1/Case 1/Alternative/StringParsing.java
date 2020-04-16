@@ -1,92 +1,65 @@
 package mypack;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class StringParsing 
 {
-
 	public static void main(String[] args) throws IOException
 	{
-		//Reading the input from console
-		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Enter the input"); 
-		String string=br.readLine();
-		
-		//splitting the string based on space
-		String str[]=string.split(" ");  
-		
-		for(int i=0; i<str.length;i++)
+		for(int i=0; i<args.length;i++)
 		{   
 			//Retrieving the first character from the array elements
-			char c=str[i].charAt(0);
+			char c=args[i].charAt(0);
 			
 			//checking the character for alphabet and string
-			if(Character.isAlphabetic(c) && str[i].length()>1)
+			if(Character.isAlphabetic(c) && args[i].length()>1)
 			{
-				System.out.println(str[i]+" String "+str[i].getBytes().length);
+				System.out.println(args[i]+" String "+args[i].getBytes().length);
 			}
 			
 			//checking the alphabet for character
-			else if(str[i].length()==1)
+			else if(args[i].length()==1)
 			{
-				System.out.println(str[i]+" Character  "+(Character.BYTES));
+				System.out.println(args[i]+" Character  "+(Character.SIZE));
 			}
 			
 			//checking for number
 			else
 			{
-			integerOrNot(str[i]);			
+			NumberOrNot(args[i]);			
 			}
 			
 		}
 	}
 		
-	//Method to check for int data type
-		static void integerOrNot(String str)
+	//Method to check for number data type
+		static void NumberOrNot(String str)
 		{
 			try
 			{
-				Integer.parseInt(str);
-				System.out.println(str +" integer "+(Integer.BYTES));
+				System.out.println(Integer.parseInt(str) +" integer "+(Integer.SIZE));
 			}
-		
-			catch(RuntimeException ex)
+		catch(Exception ex)
 			{
-				try
-				{
-				Long.parseLong(str);
-				System.out.println(str +" long "+(Long.BYTES));
-				}
-			catch(RuntimeException e)
-			{
-				floatOrNot(str);
-			}
-			
-		}
-		}
-		
-		//Method to check for Float data type
-		static void floatOrNot(String str)
-		{
 			try
 			{
-				Float.parseFloat(str);
-				System.out.println(str+" Float "+(Float.BYTES));
+			System.out.println(Long.parseLong(str) +" long "+(Long.SIZE));
 			}
-			catch(RuntimeException ex)
+			catch(Exception ex1)
 			{
 				try
 				{
-				Double.parseDouble(str);
-				System.out.println(str+" Double "+(Double.BYTES));
+					System.out.println(Float.parseFloat(str)+" Float "+(Float.SIZE));
 				}
-				catch(Exception e)
-				{
-				System.out.println("invalid input");
+			catch(Exception ex1)
+			{
+			try
+			{
+			System.out.println(Double.parseDouble(str)+" Double "+(Double.SIZE));
+			}	
+			catch(Exception e)
+			{
+			System.out.println("invalid input");
 			}
-			
 		}
+		}
+	}
 		}
 }
