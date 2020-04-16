@@ -1,4 +1,7 @@
+
 package mypack;
+
+import java.util.Arrays;
 
 public class Main 
 {
@@ -12,17 +15,21 @@ public class Main
 		System.out.println("This is default constructor");
 	}
 	
-	//parameterized constructor
+	//parameterized constructor 
 	Main(int value)
 	{
 		this.values=value;
-		System.out.println("This is overloaded constructor with integer value "+value);
+		System.out.println("This is overloaded constructor with integer value ");
 	}
 	
 	//parameterized constructor
 	Main(char[] values)
 	{
-		this.names=values;
+		names = new char[values.length]; 
+        for (int i = 0; i < names.length; i++) 
+        { 
+        	names[i] = values[i]; 
+        }
 		System.out.println("This is overloaded constructor with character value ");
 	}
 	
@@ -36,21 +43,30 @@ public class Main
 	
 	public void display()
 	{
-		System.out.println("The integer value is: "+values+"\nThe character values are: ");
-		for(int i=0;i<names.length;i++)
-		{
-			System.out.println(names[i]);	
-		}
+		System.out.println("The integer value is: "+values+"\nThe character values are: "+Arrays.toString(names));
 	}
 	
 	public static void main(String[] args) 
 	{
 		char A[]= {'a','b','c','d','e'};
+		
 		Main m=new Main();
+		
 		Main m1=new Main(20);
+		m1.names=A;
+		m1.display();
+		
+		//deep copying
+		System.out.println("Deep copy");
 		Main m2 =new Main(A);
-		Main m3=new Main(30,A);
+		m2.values=10;
 		m2.display();
+		A[0]='s';
+		m2.display(); 
+		
+		//shallow copying
+		System.out.println("Shallow copy");
+		Main m3=new Main(30,A);
 		m3.display();
 	}
 
