@@ -1,0 +1,34 @@
+Write your own program that explains the below.
+Variable Scope
+Modifier Types 
+Storage Classes
+
+Variable Scope:- Scope of a variable is the part of the program where the variable is accessible.
+Java programs are organized in the form of classes. Every class is part of some package.
+Java scope rules can be covered under following categories.
+
+Member Variables (Class Level Scope):
+
+These variables must be declared inside class (outside any function). 
+They can be directly accessed anywhere in class.
+Member variables can be accessed outside a class with the help of access specifiers.
+
+Local Variables (Method Level Scope):
+Variables declared inside a method have method level scope and can’t be accessed outside the method.
+
+
+Modifier Types: There are two types of access modifiers in java
+
+Access Modifiers:
+• Private access modifier
+• Default access modifier
+• Protected access modifier
+• Public access modifier
+
+Non-Access Modifiers:
+Java provides a number of non-access modifiers to achieve many other functionality.
+•	The static modifier for creating class methods and variables.
+•	The final modifier for finalizing the implementations of classes, methods, and variables.
+•	The abstract modifier for creating abstract classes and methods.
+•The synchronized and volatile modifiers, which are used for threa
+
