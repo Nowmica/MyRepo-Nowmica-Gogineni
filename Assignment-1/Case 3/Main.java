@@ -1,3 +1,4 @@
+//program to explain variable scope, Modifier Types, Storage classes
 package mypack;
 
 public class Main
