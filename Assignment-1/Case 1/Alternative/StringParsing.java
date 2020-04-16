@@ -48,7 +48,7 @@ public class StringParsing
 				{
 					System.out.println(Float.parseFloat(str)+" Float "+(Float.SIZE));
 				}
-			catch(Exception ex1)
+			catch(Exception ex2)
 			{
 			try
 			{
