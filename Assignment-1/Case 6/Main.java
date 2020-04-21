@@ -1,7 +1,9 @@
-
-package mypack;
+package com.hcl.domino.assig1;
 
 import java.util.Arrays;
+/**
+*This class illustatrates the shallow and deep copy of the object and constructor overloading.
+*/
 
 public class Main 
 {
@@ -9,20 +11,28 @@ public class Main
 	private int values;
 	private char[] names=new char[20] ;	
 	
-	//default constructor
+	/**
+	*This is the default constructor
+	*/
 	Main()
 	{
 		System.out.println("This is default constructor");
 	}
 	
-	//parameterized constructor 
+	/**
+	*This is the Parameterized constructor
+	@param value
+	*/
 	Main(int value)
 	{
 		this.values=value;
 		System.out.println("This is overloaded constructor with integer value ");
 	}
 	
-	//parameterized constructor
+	/**
+	*This is the Parameterized constructor
+	@param values
+	*/
 	Main(char[] values)
 	{
 		names = new char[values.length]; 
@@ -33,7 +43,10 @@ public class Main
 		System.out.println("This is overloaded constructor with character value ");
 	}
 	
-	//parameterized constructor
+	/**
+	*This is the Parameterized constructor
+	*@param value ,values
+	*/
 	Main(int value, char[] values)
 	{
 		this.names=values;
@@ -41,6 +54,10 @@ public class Main
 		System.out.println("This is overloaded constructor with integer,character values");	
 	}
 	
+	/**
+	*This is a method which is used to display the integer and character values
+	*@return null
+	*/
 	public void display()
 	{
 		System.out.println("The integer value is: "+values+"\nThe character values are: "+Arrays.toString(names));
@@ -48,11 +65,18 @@ public class Main
 	
 	public static void main(String[] args) 
 	{
+		if(args.length==0)
+		{
+		System.out.println("Usage description of the program\nThe program is used for displaying the values\nNeed input value to display\ne.g. java Main 2");
+		}
+		else
+		{
 		char A[]= {'a','b','c','d','e'};
 		
 		Main m=new Main();
-		
-		Main m1=new Main(20);
+		try
+		{
+		Main m1=new Main(Integer.parseInt(args[0]));
 		m1.names=A;
 		m1.display();
 		
@@ -68,6 +92,11 @@ public class Main
 		System.out.println("Shallow copy");
 		Main m3=new Main(30,A);
 		m3.display();
+		}
+			catch(exception e)
+			{
+				System.out.println("Invalid input");
+			}
 	}
 
 }
