@@ -17,5 +17,5 @@ Testcase No        Description            	Given Input               Expected Ou
 									.15 float 4                   .15 float 2
 
 6              Passing a random string           -57894 15fdf          -57894 integer 4              -57894 integer 4          Pass
-                                                                        invalid input                  invalid input
+                                                                        15fdf String 5                 15fdf String 5
 									
