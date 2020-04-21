@@ -1,108 +1,65 @@
-//Program to find the datatype of the given input
 package mypack;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class Main 
+{	
+public static void main(String[] args) 
 {
-
-	public static void main(String[] args) throws IOException
-	{
-		//Reading the input from console
-		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Enter the input"); 
-		String string=br.readLine();
+for(int i=0; i<args.length;i++)
+{   
+//Retrieving the first character from the array elements
+char c=args[i].charAt(0);
+			
+//checking the character for alphabet and string
+if(Character.isAlphabetic(c) && args[i].length()>1)
+{
+System.out.println(args[i]+" String "+args[i].getBytes().length);
+}
+			
+//checking the alphabet for character
+else if(args[i].length()==1)
+{
+System.out.println(args[i]+" Character  "+(Character.BYTES));
+}
+			
+//checking for number
+else
+{
+NumberOrNot(args[i]);			
+}
+}
+}
 		
-		//splitting the string based on space
-		String str[]=string.split(" ");  
-		
-		for(int i=0; i<str.length;i++)
-		{   
-			//Retrieving the first character from the array elements
-			char c=str[i].charAt(0);
-			
-			//checking the character for alphabet and string
-			if(Character.isAlphabetic(c) && str[i].length()>1)
-			{
-				System.out.println(str[i]+" String "+str[i].getBytes().length);
-			}
-			
-			//checking the alphabet for character
-			else if(str[i].length()==1)
-			{
-				System.out.println(str[i]+" Character  "+(Character.BYTES));
-			}
-			
-			//checking for number
-			else
-			{
-			integerOrNot(str[i]);			
-			}
-			
-		}
-	}
-		
-	//Method to check for int data type
-		static void integerOrNot(String str)
-		{
-			
-			try
-			{
-				Integer.parseInt(str);
-				System.out.println(str +" integer "+(Integer.BYTES));
-			}
-			catch(RuntimeException ex)
-			{
-				longOrNot(str);
-			}
-			
-		}
-	
-		//Method to check for long data type
-		static void longOrNot(String str)
-		{
-			
-			try
-			{
-				Long.parseLong(str);
-				System.out.println(str +" long "+(Long.BYTES));
-			}
-			catch(RuntimeException ex)
-			{
-				floatOrNot(str);
-			}
-			
-		}
-		
-		
-		//Method to check for Float data type
-		static void floatOrNot(String str)
-		{
-			try
-			{
-				Float.parseFloat(str);
-				System.out.println(str+" Float "+(Float.BYTES));
-			}
-			catch(RuntimeException ex)
-			{
-				doubleOrNot(str);
-			}
-			
-		}
-		
-		//Method to check for double data type	
-		static void doubleOrNot(String str)
-		{
-			try
-			{
-				Double.parseDouble(str);
-				System.out.println(str+" double "+(Double.BYTES));
-			}
-			catch(RuntimeException ex)
-			{
-				System.out.println(ex);
-			}
-		}
+//Method to check for number data type
+static void NumberOrNot(String str)
+{
+try
+{
+System.out.println(Integer.parseInt(str) +" integer "+(Integer.BYTES));
+}
+catch(Exception ex)
+{
+try
+{
+System.out.println(Long.parseLong(str) +" long "+(Long.BYTES));
+}
+catch(Exception ex1)
+{
+try
+{
+System.out.println(Float.parseFloat(str)+" Float "+(Float.BYTES));
+}
+catch(Exception ex2)
+{
+try
+{
+System.out.println(Double.parseDouble(str)+" Double "+(Double.BYTES));
+}	
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+}
+}
+}
 }
