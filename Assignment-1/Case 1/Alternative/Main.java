@@ -1,8 +1,13 @@
-package mypack;
+package com.hcl.domino.assg1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
+/*
+ This class is created for checking the data type and size of the input  given by the user.
+ The size and data type are defined by using some methods in java.lang package.
+ */
 
 public class Main 
 {
@@ -43,7 +48,11 @@ public class Main
 		}
 	}
 		
-	//Method to check for int data type
+	/* 
+	This is the method used for checking for number data type i.e, int,long.
+	The method takes string as a parameter and checks for the data type.
+	Exceptional Handling mechanism is used to for checking the data type.
+	*/
 		static void integerOrNot(String str)
 		{
 			try
@@ -58,7 +67,11 @@ public class Main
 			
 		}
 		
-		//Method to check for Float data type
+	/* 
+	This is the method used for checking for floating number data type i.e, float and double.
+	The method takes string as a parameter and checks for the data type.
+	Exceptional Handling mechanism is used to for checking the data type.
+	*/
 		static void floatOrNot(String str)
 		{
 			try
