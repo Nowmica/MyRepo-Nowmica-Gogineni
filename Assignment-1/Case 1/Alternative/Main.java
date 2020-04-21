@@ -1,65 +1,75 @@
 package mypack;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Main 
 {
-	public static void main(String[] args) 
+
+	public static void main(String[] args) throws IOException
 	{
-		for(int i=0; i<args.length;i++)
+		//Reading the input from console
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter the input"); 
+		String string=br.readLine();
+		
+		//splitting the string based on space
+		String str[]=string.split(" ");  
+		
+		for(int i=0; i<str.length;i++)
 		{   
 			//Retrieving the first character from the array elements
-			char c=args[i].charAt(0);
+			char c=str[i].charAt(0);
 			
 			//checking the character for alphabet and string
-			if(Character.isAlphabetic(c) && args[i].length()>1)
+			if(Character.isAlphabetic(c) && str[i].length()>1)
 			{
-				System.out.println(args[i]+" String "+args[i].getBytes().length);
+				System.out.println(str[i]+" String "+str[i].getBytes().length);
 			}
 			
 			//checking the alphabet for character
-			else if(args[i].length()==1)
+			else if(str[i].length()==1)
 			{
-				System.out.println(args[i]+" Character  "+(Character.BYTES));
+				System.out.println(str[i]+" Character  "+(Character.BYTES));
 			}
 			
 			//checking for number
 			else
 			{
-			NumberOrNot(args[i]);			
+			integerOrNot(str[i]);			
 			}
 			
 		}
 	}
 		
-	//Method to check for number data type
-		static void NumberOrNot(String str)
+	//Method to check for int data type
+		static void integerOrNot(String str)
 		{
 			try
 			{
-				System.out.println(Integer.parseInt(str) +" integer "+(Integer.BYTES));
+				Integer.parseInt(str);
+				System.out.println(str +" integer/long "+(Integer.BYTES));
 			}
-		catch(Exception ex)
+			catch(RuntimeException ex)
 			{
+				floatOrNot(str);
+			}
+			
+		}
+		
+		//Method to check for Float data type
+		static void floatOrNot(String str)
+		{
 			try
 			{
-			System.out.println(Long.parseLong(str) +" long "+(Long.BYTES));
+				Float.parseFloat(str);
+				System.out.println(str+" Float/double "+(Float.BYTES));
 			}
-			catch(Exception ex1)
+			catch(RuntimeException ex)
 			{
-				try
-				{
-					System.out.println(Float.parseFloat(str)+" Float "+(Float.BYTES));
-				}
-			catch(Exception ex2)
-			{
-			try
-			{
-			System.out.println(Double.parseDouble(str)+" Double "+(Double.BYTES));
-			}	
-			catch(Exception e)
-			{
-			System.out.println(e);
+				System.out.println("invalid input");
 			}
-		}
-		}
-	}
+			
 		}
 }
