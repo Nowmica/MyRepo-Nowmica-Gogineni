@@ -1,38 +1,43 @@
-//program to print the sum of series 1+4+9+16....
-package mypack;
+package com.hcl.domino.assig1;
 
 import java.util.InputMismatchException;
-import java.util.Scanner;
-
+/**
+*The program is used to find the sum of squares of the number.
+ *@author Nowmica
+ *@version 1.8
+ */
 public class Main
 {
 	public static void main(String[] args) 
 	{
-		
-		//To read the input from user
-		Scanner sc=new Scanner(System.in);
-		
-		System.out.println("Enter a number");
-		
-		//Handling the exception if user does not enter a number
-		try
-		{
-			
-		//Reading the input to variable number
-		int number=sc.nextInt();
-		
-		//printing the output by calling the static method
-		System.out.println(SumOfSquares(number));
-		}
-		
-		//catching the exception of type InputMismatch
-		catch(InputMismatchException e)
-		{
-			System.out.println("Invalid input");
-		}
-		
+	//display the usage to the user
+	if(args.length==0)
+	{
+	System.out.println("Usage description of the program\nThe program is used for caluclating the sum of squares\nNeed a input value to calculate the sum of sqaures\ne.g. java Main 2");
 	}
-	
+	else
+	{
+	//Handling the exception if user does not enter a number
+	try
+	{
+	//Reading the input to variable number
+	int number=Integer.parseInt(args[0]);
+		
+	//printing the output by calling the static method
+	System.out.println(SumOfSquares(number));
+	}
+	//catching the exception 
+	catch(Exception e)
+	{
+	System.out.println("Invalid input");
+	}
+	}
+/**
+*This is the method used for calculating the squares.
+*This takes an int parameter given by the user.
+*This method checks for negative numbers as well.
+*@return long
+*/
 	static long SumOfSquares(int number)
 	{
 		long result=0;
