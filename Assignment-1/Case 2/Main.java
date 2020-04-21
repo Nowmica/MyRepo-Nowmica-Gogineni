@@ -40,7 +40,7 @@ public class Main
 		//checking for negative number
 		if(number<0)
 		{
-			System.out.println("Number cannot be negative");
+			System.out.println("Number cannot be negative\n");
 		}
 		
 		//calculating the sum of the squares for given number
