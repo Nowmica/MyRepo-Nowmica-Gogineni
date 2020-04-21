@@ -1,7 +1,7 @@
 package mypack;
-public class StringParsing 
+public class Main 
 {
-	public static void main(String[] args) throws IOException
+	public static void main(String[] args) 
 	{
 		for(int i=0; i<args.length;i++)
 		{   
@@ -17,7 +17,7 @@ public class StringParsing
 			//checking the alphabet for character
 			else if(args[i].length()==1)
 			{
-				System.out.println(args[i]+" Character  "+(Character.SIZE));
+				System.out.println(args[i]+" Character  "+(Character.BYTES));
 			}
 			
 			//checking for number
@@ -34,29 +34,29 @@ public class StringParsing
 		{
 			try
 			{
-				System.out.println(Integer.parseInt(str) +" integer "+(Integer.SIZE));
+				System.out.println(Integer.parseInt(str) +" integer "+(Integer.BYTES));
 			}
 		catch(Exception ex)
 			{
 			try
 			{
-			System.out.println(Long.parseLong(str) +" long "+(Long.SIZE));
+			System.out.println(Long.parseLong(str) +" long "+(Long.BYTES));
 			}
 			catch(Exception ex1)
 			{
 				try
 				{
-					System.out.println(Float.parseFloat(str)+" Float "+(Float.SIZE));
+					System.out.println(Float.parseFloat(str)+" Float "+(Float.BYTES));
 				}
 			catch(Exception ex2)
 			{
 			try
 			{
-			System.out.println(Double.parseDouble(str)+" Double "+(Double.SIZE));
+			System.out.println(Double.parseDouble(str)+" Double "+(Double.BYTES));
 			}	
 			catch(Exception e)
 			{
-			System.out.println("invalid input");
+			System.out.println(e);
 			}
 		}
 		}
