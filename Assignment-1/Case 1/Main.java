@@ -1,8 +1,10 @@
 package com.hcl.domino.assign1;
 
-/*
- This class is created for checking the data type and size of the input  given by the user.
- The size and data type are defined by using some methods in java.lang package.
+/**
+ *This class is created for checking the data type and size of the input  given by the user.
+ *The size and data type are defined by using some methods in java.lang package.
+ *@author Nowmica
+ *@version 1.8
  */
 public class Main 
 {	
@@ -41,11 +43,12 @@ NumberOrNot(args[i]);
 }
 }
 }		
-/* 
-This is the method used for checking for number data type i.e, int,long,float and double.
-The method takes string as a parameter and checks for the data type.
-Exceptional Handling mechanism is used for checking the data type.
-some methods from java.lang package are used for converting the string to the primitive data type i.e, Integer.parseInt()
+/**
+*This is the method used for checking for number data type i.e, int,long,float and double.
+*The method takes string as a parameter and checks for the data type.
+*Exceptional Handling mechanism is used to for checking the data type.
+*some methods from java.lang package are used for converting the string to the primitive data type i.e, Integer.parseInt().
+* @return null
  */
 static void NumberOrNot(String str)
 {
