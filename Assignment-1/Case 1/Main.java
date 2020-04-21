@@ -32,7 +32,7 @@ public class Main
 			//checking the alphabet for character
 			else if(str[i].length()==1)
 			{
-				System.out.println(str[i]+" Character  "+(Character.SIZE));
+				System.out.println(str[i]+" Character  "+(Character.BYTES));
 			}
 			
 			//checking for number
@@ -51,7 +51,7 @@ public class Main
 			try
 			{
 				Integer.parseInt(str);
-				System.out.println(str +" integer "+(Integer.SIZE));
+				System.out.println(str +" integer "+(Integer.BYTES));
 			}
 			catch(RuntimeException ex)
 			{
@@ -67,7 +67,7 @@ public class Main
 			try
 			{
 				Long.parseLong(str);
-				System.out.println(str +" long "+(Long.SIZE));
+				System.out.println(str +" long "+(Long.BYTES));
 			}
 			catch(RuntimeException ex)
 			{
@@ -83,7 +83,7 @@ public class Main
 			try
 			{
 				Float.parseFloat(str);
-				System.out.println(str+" Float "+(Float.SIZE));
+				System.out.println(str+" Float "+(Float.BYTES));
 			}
 			catch(RuntimeException ex)
 			{
@@ -98,11 +98,11 @@ public class Main
 			try
 			{
 				Double.parseDouble(str);
-				System.out.println(str+" double "+(Double.SIZE));
+				System.out.println(str+" double "+(Double.BYTES));
 			}
 			catch(RuntimeException ex)
 			{
-				System.out.println("invalid input");
+				System.out.println(ex);
 			}
 		}
 }
