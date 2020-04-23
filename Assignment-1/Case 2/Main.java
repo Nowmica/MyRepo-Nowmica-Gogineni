@@ -32,6 +32,7 @@ public class Main
 	System.out.println("Invalid input");
 	}
 	}
+	}
 /**
 *This is the method used for calculating the squares.
 *This takes an int parameter given by the user.
