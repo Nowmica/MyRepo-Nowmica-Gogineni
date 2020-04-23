@@ -1,4 +1,6 @@
 package com.hcl.domino.assig1;
+
+import com.hcl.domino.sub.assign1.Sub;
 /**
 *This class illustrates the difference between public, private and protected access specifiers
 */
