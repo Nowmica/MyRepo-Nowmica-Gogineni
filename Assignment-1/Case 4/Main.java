@@ -55,6 +55,9 @@ public class Main
 	//calling the private method in the same class
 	Am.methodPrivate();
 		
+	//calling then protected method in the same class 
+	Am.methodProtected();
+		
 	//calling then default method in the same class 
 	Am.methodDefault();
 		
