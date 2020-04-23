@@ -1,8 +1,0 @@
-Test Cases:
-Testcase No         Description               Given Input            Expected Output                            Actual Output                  Result
-
-1   		          Passing the integer value			   5 8         The length,height and width is 8 5 30 	 The length,height and width is 8 5 30   Pass
-
-2                  Passing the float value			    .15		                 invalid input	                         invalid input 	             Pass
-
-	   
