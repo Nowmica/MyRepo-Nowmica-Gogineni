@@ -3,7 +3,7 @@ package com.hcl.domino.assig1;
 /**
  * This program illustrates the different ways of initializing the private member variables
  */
-public class PrivateMem 
+public class Main 
 {
 
 	public static void main(String[] args) 
