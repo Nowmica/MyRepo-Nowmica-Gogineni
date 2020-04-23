@@ -93,7 +93,7 @@ public class Main
 		Main m3=new Main(30,A);
 		m3.display();
 		}
-			catch(exception e)
+			catch(Exception e)
 			{
 				System.out.println("Invalid input");
 			}
